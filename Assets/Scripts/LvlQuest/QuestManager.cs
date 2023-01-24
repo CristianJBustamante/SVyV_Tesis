@@ -14,6 +14,12 @@ public class QuestManager : MonoBehaviour
     public bool gameOver;
     public OffScreenIndicators indicators;
 
+    public bool gameStopped = false;
+
+    bool[] triggerMessages; 
+
+    [SerializeField] string[] messages;
+
     private void Awake(){
         if(instance)
             Destroy(this.gameObject);
@@ -24,12 +30,17 @@ public class QuestManager : MonoBehaviour
     void Start()
     {
         StartCoroutine(StartLevel());
+        triggerMessages = new bool[3] {false,false,false};
     }
 
     // Update is called once per frame
     
     IEnumerator StartLevel(){
-        yield return new WaitForSeconds(Random.Range(5,15));
+        int waitTime=Random.Range(5,15);
+        for(int i =0; i<= waitTime;){
+            yield return new WaitForSeconds(1);
+            if(!gameStopped) i++;
+        }
         firePoints[firesStarted].StartFire();
         firesStarted++;
         if(firesStarted < firePoints.Count){
@@ -55,6 +66,36 @@ public class QuestManager : MonoBehaviour
         Debug.Log("We are in flames!. YOU LOSE!");
         UIManager.instance.ActivateFinalMessage(false);
         if( MovimientoCamara.instance.FuegoDerrota == null) MovimientoCamara.instance.setFuegoDerrota(cause);
+    }
+
+    public void CheckMessages(string type){
+        switch(type){
+            case "Fogata":
+                    if (!triggerMessages[0]){
+                        UIManager.instance.DisplayInfoQuest("Fogata", messages[0]);
+                        gameStopped = true;
+                        triggerMessages[0]=true;
+                    }
+                    break;
+                case "BidonCaido":
+                    if (!triggerMessages[1]){
+                        UIManager.instance.DisplayInfoQuest("Combustible", messages[1]);
+                        triggerMessages[1]=true;
+                        gameStopped = true;
+                    }
+                    break;
+                case "BasuraVidrio":
+                    if (!triggerMessages[2]){
+                        UIManager.instance.DisplayInfoQuest("Basura", messages[2]);
+                        triggerMessages[2]=true;
+                        gameStopped = true;
+                    }
+                    break;
+        }
+    }
+
+    public void ContinueGame(){
+        gameStopped = false;
     }
 
 }

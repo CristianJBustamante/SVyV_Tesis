@@ -7959,10 +7959,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 3
-  titleText: ' Fire extinguisher (Level 2)'
-  descriptionText: It helps the firefighters put out the fire produced by different
-    reasons such as solid fuels, flammable liquids or electrical elements. Can you
-    helpus again?.
+  titleText: ' Extintor de incendios (Level 2)'
+  descriptionText: "Ayuda a los bomberos a apagar el fuego producido por diferentes
+    causas como combustibles s\xF3lidos, l\xEDquidos inflamables o elementos el\xE9ctricos.
+    \xBFPuedes ayudarnos de nuevo?."
   trofeo: {fileID: 2081362086}
   level: 2
 --- !u!65 &859338570
@@ -9847,9 +9847,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1126778523}
   textToWrite:
-  - Hi my little friend!. Wellcome to the Fire Station!
-  - Wellcome again to the Fire Station!
-  - 'Thanks for you help!.  We are grateful!. '
+  - "Hola peque\xF1o amigo!. Bienvenido a la Estaci\xF3n de Bomberos!"
+  - "Bienvenido denuevo a la estaci\xF3n!"
+  - 'Gracias por tu ayuda!.  Estamos agradecidos!. '
   charArray: 
   panel: {fileID: 2146533658}
   audio: {fileID: 1066343026}
@@ -14334,9 +14334,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 2
-  titleText: ' Firefighter suit (Level 3)'
-  descriptionText: 'It protect the fireman from thermal and radiant exposure, unexpected
-    flash fire conditions, puncture or cut hazard. '
+  titleText: ' Traje de bombero (Level 3)'
+  descriptionText: " Protege al bombero de la exposici\xF3n t\xE9rmica y radiante,
+    condiciones inesperadas de incendio repentino, peligro de pinchazos o cortes."
   trofeo: {fileID: 853216055}
   level: 3
 --- !u!65 &1532204274
@@ -15323,8 +15323,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\rThanks for playing the game!.\r\nYou can stay as long as you want!\r\nAnd
-    you can get more information from the Unquillo fire department:"
+  m_text: "\rGracias por jugar el juego!.\r\nPuedes quedarte cuanto quieras!\r\ny
+    puedes obtener mas informaci\xF3n del departamento de bomberos de Unquillo:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 37a4f5660d9030c4c8da4ca37e43033e, type: 2}
   m_sharedMaterial: {fileID: 2616997670376301945, guid: 37a4f5660d9030c4c8da4ca37e43033e, type: 2}
@@ -28660,9 +28660,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 2
-  titleText: Fireman Helmet (Level 1)
-  descriptionText: The helmet is a good protection agains fire, impacts and quimical
-    agents. Can you helpus to find the one is that missing?
+  titleText: Casco de Bomberos (Level 1)
+  descriptionText: "El casco es una buena protecci\xF3n contra el fuego, impactos
+    y agentes qu\xEDmicos. \xBFPuedes ayudarnos a encontrar el que falta?"
   trofeo: {fileID: 5564358182202530708}
   level: 1
 --- !u!33 &5654537556214619704

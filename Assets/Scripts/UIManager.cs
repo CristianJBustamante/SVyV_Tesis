@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -116,6 +117,28 @@ public class UIManager : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
         audio.Stop();
+        if(SceneManager.GetActiveScene().name == "FIreQuest") StartCoroutine(EnableOKButton(2));
+    }
+
+    public void DisplayInfoQuest(string title, string description){
+        infoPanel.SetActive(true);
+        infoTitleText.text = title;
+        infoDescriptionText.text = "";
+        charArray = description.ToCharArray();
+        StartCoroutine(WriteTextDesciption());
+    }
+
+
+
+    IEnumerator EnableOKButton(int time){
+        yield return new WaitForSeconds(time);
+        buttonOk.SetActive(true);
+    }
+
+    public void DisableInfoPanel(){
+        buttonOk.SetActive(false);
+        infoPanel.SetActive(false);
+        QuestManager.instance.ContinueGame();
     }
 
     public void GoToURL(string url){

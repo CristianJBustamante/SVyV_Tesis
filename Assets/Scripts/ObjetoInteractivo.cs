@@ -66,7 +66,16 @@ public class ObjetoInteractivo : MonoBehaviour
     public IEnumerator EncenderFuego()
     {
         GameObject go;
-        yield return new WaitForSeconds(Random.Range(5, 15));
+        int waitTime=Random.Range(5,15);
+        for(int i =0; i<= waitTime;){
+            yield return new WaitForSeconds(1);
+            if(QuestManager.instance != null){
+                if(!QuestManager.instance.gameStopped) i++;
+            } 
+            else{
+                i++;
+            }
+        }
         if (resuelto == false)
         {
             Vector3 pos = new Vector3();
@@ -85,13 +94,22 @@ public class ObjetoInteractivo : MonoBehaviour
             switch (this.tag)
             {
                 case "Fogata":
-                    if (!resuelto) UIManager.instance.ActiveDesactiveButton("buttonAct");
+                    if (!resuelto){
+                        UIManager.instance.ActiveDesactiveButton("buttonAct");
+                        QuestManager.instance.CheckMessages(this.tag);
+                    }
                     break;
                 case "BidonCaido":
-                    if (!resuelto) UIManager.instance.ActiveDesactiveButton("buttonAct");
+                    if (!resuelto){
+                        UIManager.instance.ActiveDesactiveButton("buttonAct");
+                        QuestManager.instance.CheckMessages(this.tag);
+                    }
                     break;
                 case "BasuraVidrio":
-                    if (!resuelto) UIManager.instance.ActiveDesactiveButton("buttonClean");
+                    if (!resuelto){
+                        UIManager.instance.ActiveDesactiveButton("buttonClean");
+                        QuestManager.instance.CheckMessages(this.tag);
+                    }
                     break;
                 case "ObjetoInteractivo":
                     UIManager.instance.ActiveDesactiveButton("buttonInteract");
