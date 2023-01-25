@@ -26,6 +26,8 @@ TagManager:
   - Oil
   - Water
   - wheels
+  - ObstacleCollider
+  - ObstacleRoad
   layers:
   - Default
   - TransparentFX

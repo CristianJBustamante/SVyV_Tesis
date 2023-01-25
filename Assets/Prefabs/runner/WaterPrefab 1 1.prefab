@@ -1,5 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1562441448736637657
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4196651570402480479}
+  - component: {fileID: 2594689493355580394}
+  m_Layer: 0
+  m_Name: ObstacleCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4196651570402480479
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562441448736637657}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6054061860364966149}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2594689493355580394
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562441448736637657}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.5986824, y: 1.6388519, z: 1}
+  m_Center: {x: -0.11008215, y: 0.8464385, z: 0}
 --- !u!1 &8666363938097085942
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,6 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8898943847188747489}
   - component: {fileID: 3392120427602612040}
+  - component: {fileID: 5972006818825463871}
   m_Layer: 0
   m_Name: WaterPrefab 1 1
   m_TagString: Untagged
@@ -45,6 +91,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4b80cc20218694c8b28ca21ca09aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &5972006818825463871
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8666363938097085942}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.46073246
+  m_Height: 1.2399448
+  m_Direction: 1
+  m_Center: {x: 2.1516175, y: 0.45513958, z: -0.15554118}
 --- !u!1001 &1647599935938286569
 PrefabInstance:
   m_ObjectHideFlags: 0

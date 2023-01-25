@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7877022138416747870}
   - component: {fileID: 1271637164970801803}
+  - component: {fileID: 5400215686529903441}
   m_Layer: 0
   m_Name: Cono_Prefab
-  m_TagString: Untagged
+  m_TagString: ObstacleRoad
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,6 +46,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4b80cc20218694c8b28ca21ca09aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &5400215686529903441
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7877022138416747871}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.659985, y: 0.9042212, z: 0.65998495}
+  m_Center: {x: 0.122118086, y: 0.45494968, z: 0.07422866}
 --- !u!1001 &7877022138242809694
 PrefabInstance:
   m_ObjectHideFlags: 0
