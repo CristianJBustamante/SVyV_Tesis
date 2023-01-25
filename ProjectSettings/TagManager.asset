@@ -20,6 +20,12 @@ TagManager:
   - Edificio1
   - Edificio2
   - Edificio3
+  - Fire
+  - Obstacle
+  - Fuel
+  - Oil
+  - Water
+  - wheels
   layers:
   - Default
   - TransparentFX

@@ -34,13 +34,13 @@ public class FireTruck : MonoBehaviour
         transform.Translate(Vector3.right * Time.deltaTime * velocidad * horizontanDirection);
 
         //Limitador de pantalla
-        if (transform.position.z >= -0.31f)
+        if (transform.position.z >= -1.1f)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, -0.31f);
+            transform.position = new Vector3(transform.position.x, transform.position.y, -1.1f);
         }
-        else if (transform.position.z <= -7.7f)
+        else if (transform.position.z <= -6.9f)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, -7.7f);
+            transform.position = new Vector3(transform.position.x, transform.position.y, -6.9f);
         }
 
         if (transform.position.x >= -3.4f)
@@ -106,12 +106,6 @@ public class FireTruck : MonoBehaviour
             LeanTween.rotate(this.gameObject,new Vector3(0,180,0),.3f);
         }
     }
-
-    public void hollaaa(){
-
-    }
-
-
 
     
 }
