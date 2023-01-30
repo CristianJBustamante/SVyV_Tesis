@@ -9,7 +9,7 @@ public class RuteManager : MonoBehaviour
     public Image waterBar;
     public Image fuelBar;
 
-    public float fuel = 100;
+    public float fuel = 150;
 
     public float water = 100;
     public float velocidad = 5.0f;

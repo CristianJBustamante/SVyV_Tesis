@@ -58,11 +58,17 @@ public class FireTruck : MonoBehaviour
         GameObject col = other.gameObject;
         switch(col.tag){
             case "Fuel":
-                if(RuteManager.instance.fuel <= 90) RuteManager.instance.fuel = RuteManager.instance.fuel+10;
+                if(RuteManager.instance.fuel <= 90) RuteManager.instance.fuel = RuteManager.instance.fuel+20;
                 else RuteManager.instance.fuel = 100;
                 RuteManager.instance.RefreshBars();
                 col.SetActive(false);
             break;
+            case "Water":
+                if (RuteManager.instance.water <= 90) RuteManager.instance.water = RuteManager.instance.water + 10;
+                else RuteManager.instance.water = 100;
+                RuteManager.instance.RefreshBars();
+                col.SetActive(false);
+                break;
             case "Obstacle":
                 if(RuteManager.instance.water >= 10) RuteManager.instance.water = RuteManager.instance.water - 10;
                 else RuteManager.instance.water = 0;

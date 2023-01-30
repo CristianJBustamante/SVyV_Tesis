@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6539921497329494771}
   - component: {fileID: -2216188778430857259}
   - component: {fileID: 4200708598990879204}
+  - component: {fileID: -4760709255301937742}
   m_Layer: 0
   m_Name: OilPrefab
-  m_TagString: Untagged
+  m_TagString: Fuel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,11 +55,27 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1506720177037187320}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.25766277, y: 0.8064792, z: 0.6513214}
   m_Center: {x: -2.0780587, y: 0.40145266, z: -0.5173108}
+--- !u!54 &-4760709255301937742
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506720177037187320}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &7778232271531716819
 GameObject:
   m_ObjectHideFlags: 0

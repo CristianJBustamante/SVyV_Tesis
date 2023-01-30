@@ -34,7 +34,6 @@ public class ObjectSpawner : MonoBehaviour
     void GenerateObstacles() {
         int randomLane = Random.Range(0, 3);
         int indexObstacles = Random.Range(0, obstacles.Length);
-        Debug.Log(randomLane);
         Vector3 posGeneration;
         switch (randomLane)
         {
