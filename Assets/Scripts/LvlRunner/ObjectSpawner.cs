@@ -6,11 +6,6 @@ public class ObjectSpawner : MonoBehaviour
 {
     public GameObject[] obstacles;
     public GameObject[] powerUps;
-
-    private float posGenerationObstacleZ = 10f;
-    private float posGenerationObstacleX;
-    private float powerUpZ;
-    private float powerUpX;
     public int velocity;
 
     private float timerObstacle = 1.5f;

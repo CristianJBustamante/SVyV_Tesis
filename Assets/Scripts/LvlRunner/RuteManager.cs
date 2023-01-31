@@ -14,6 +14,10 @@ public class RuteManager : MonoBehaviour
     public float water = 100;
     public float velocidad = 5.0f;
 
+    public Text distanceText;
+
+    public int distance = 2000;
+
     public static RuteManager instance;
 
     private void Awake(){
@@ -31,7 +35,10 @@ public class RuteManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        distance = (int)(distance - Time.deltaTime * velocidad);
+
+        distanceText.text = "Distancia: " + distance + "m";
+
     }
 
     public void RefreshBars(){
