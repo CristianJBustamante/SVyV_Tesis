@@ -39,6 +39,18 @@ public class RuteManager : MonoBehaviour
 
         distanceText.text = "Distancia: " + distance + "m";
 
+        if (distance <= 0) {
+
+            WinLevel();
+            Time.timeScale = 0f;
+        }
+
+        if (water <= 0 || fuel <= 0) {
+
+            LoseLevel();
+            Time.timeScale = 0f;
+
+        }
     }
 
     public void RefreshBars(){
