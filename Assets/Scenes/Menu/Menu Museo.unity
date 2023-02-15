@@ -14333,7 +14333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b37d3f797846724383b02549f4b8162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 2
+  index: 4
   titleText: ' Traje de bombero (Level 3)'
   descriptionText: " Protege al bombero de la exposici\xF3n t\xE9rmica y radiante,
     condiciones inesperadas de incendio repentino, peligro de pinchazos o cortes."

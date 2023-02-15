@@ -18,6 +18,8 @@ public class RuteManager : MonoBehaviour
 
     public int distance = 2000;
 
+    public bool finishLevel;
+
     public static RuteManager instance;
 
     private void Awake(){
@@ -29,26 +31,28 @@ public class RuteManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(distanceReduce());
     }
 
     // Update is called once per frame
     void Update()
     {
-        distance = (int)(distance - Time.deltaTime * velocidad);
+        // distance = (int)(distance - Time.deltaTime * velocidad * 10);
 
         distanceText.text = "Distancia: " + distance + "m";
 
         if (distance <= 0) {
 
             WinLevel();
-            Time.timeScale = 0f;
+            if(velocidad > 0) velocidad-= 0.01f;
+            // Time.timeScale = 0f;
         }
 
         if (water <= 0 || fuel <= 0) {
 
             LoseLevel();
-            Time.timeScale = 0f;
+            if(velocidad > 0) velocidad-= 0.01f;
+            // Time.timeScale = 0f;
 
         }
     }
@@ -59,9 +63,21 @@ public class RuteManager : MonoBehaviour
     }
 
     public void LoseLevel(){
+        finishLevel = true;
+        Menu.instance.losePanel.SetActive(true);
         Debug.Log("Level Lose!");
     }
     public void WinLevel(){
+        finishLevel = true;
+        Menu.instance.winPanel.SetActive(true);
+        PlayerPrefs.SetInt("NivelesCompletados", 3);
         Debug.Log("Level Win!");
+    }
+
+    IEnumerator distanceReduce(){
+        do{
+            yield return new WaitForSeconds(0.05f);
+            distance--;
+        }while(distance > 0 && !RuteManager.instance.finishLevel);
     }
 }

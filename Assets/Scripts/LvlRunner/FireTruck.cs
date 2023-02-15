@@ -79,7 +79,7 @@ public class FireTruck : MonoBehaviour
 
     IEnumerator _SpendFuel(){
         yield return new WaitForSeconds(0.4f);
-        if(working){
+        if(working && !RuteManager.instance.finishLevel){
             if(RuteManager.instance.fuel > 0){
                 RuteManager.instance.fuel--;
                 RuteManager.instance.RefreshBars();
@@ -92,6 +92,7 @@ public class FireTruck : MonoBehaviour
     }
 
     public void SetDirectionUP(bool buttonDown){
+        if(RuteManager.instance.finishLevel) return;
         if(buttonDown){
             verticalDirection = verticalDirection - 1;
             LeanTween.rotate(this.gameObject,new Vector3(0,170,0),.3f);
@@ -103,6 +104,7 @@ public class FireTruck : MonoBehaviour
     }
 
     public void SetDirectionDown(bool buttonDown){
+        if(RuteManager.instance.finishLevel) return;
         if(buttonDown){
             verticalDirection = verticalDirection + 1;
             LeanTween.rotate(this.gameObject,new Vector3(0,190,0),.3f);

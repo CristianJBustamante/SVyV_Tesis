@@ -39,7 +39,6 @@ public class Fire : MonoBehaviour
     {
         while (true)
         {
-
             yield return new WaitForSeconds(0.2f);
             risk++;
             this.gameObject.transform.localScale += encendiendo;
@@ -59,8 +58,6 @@ public class Fire : MonoBehaviour
                 StartCoroutine(_FireOff());
                 break;
             }
-
-
         }
     }
 
@@ -74,7 +71,6 @@ public class Fire : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
             risk--;
             this.gameObject.transform.localScale += apagando;
-
             if (risk <= -25 && isFogata)
             {
                 transform.GetComponentInParent<FireSpot>().onfire = false;
